@@ -205,4 +205,5 @@ int main(){
 	y=y^47; // n-2
 	y=y.inv();
 	for(auto k:y)cout<<*(int*)&k;
+	
 }
