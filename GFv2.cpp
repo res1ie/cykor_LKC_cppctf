@@ -77,6 +77,15 @@ public:
 			o[i]=(o[i]+(*this)[i]);
 		return o;
 	}
+	GGF operator-() const{
+		GGF o; 
+		for(int i=0;i<n;i++)
+			o[i]=(p-(*this)[i]);
+		return o;
+	}
+	GGF operator-(GGF o) const{
+		return *this+(-o);
+	}
 	GGF operator*(GGF o) const{
 		array<MF<int_t,p>,n+1> tmp = *(array<MF<int_t,p>,n+1>*)this;
 		array<MF<int_t,p>,n+1> res;
@@ -132,6 +141,12 @@ public:
 	GF operator+(const GF o) const{
 		return GF(*(bitset<n+1>*)this^o);
 	}
+	GF operator-(const GF o) const{
+		return GF(*(bitset<n+1>*)this^o);
+	}
+	GF operator-() const{
+		return *this;
+	} 
 	GF operator*(const GF o) const{
 		bitset<n+1> tmp = *(bitset<n+1>*)this;
 		bitset<n+1> res;
