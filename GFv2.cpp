@@ -55,6 +55,9 @@ public:
 	MF operator/(const MF o) const{
 		return MF(*this*o.inv());
 	}
+	bool operator==(const MF o) const{
+		return x==o.x;
+	}
 };
 /*
 general GF , looking for some good naming 
