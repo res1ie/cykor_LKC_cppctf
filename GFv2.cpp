@@ -63,6 +63,12 @@ public:
 	bool operator==(const MF o) const{
 		return x==o.x;
 	}
+	bool operator!=(const MF o) const{
+		return x!=o.x;
+	}
+	MF operator<(MF o) const{
+		return x<o.x;
+	} 
 };
 /*
 general GF , looking for some good naming 
@@ -127,6 +133,12 @@ public:
 	}
 	GGF operator/( GGF o) const{
 		return *this*o.inv();
+	}
+	bool operator<(GGF o) const { // does not means anything, but need it to use std::set<GF>, etc
+		for(int i=n;i>=0;i--)
+			if((*this)[i]!=o[i])
+				return (*this)[i]<o[i];
+		return false;
 	}
 };
 /*
@@ -213,7 +225,7 @@ int_t descrete_log(mg a,mg b,int_t phi){ // log_a(b)
 	return -1;
 }
 /*
-//DLP usage
+//DLP testing
 int main(){
 	typedef GF<8,1> gf;
 	gf::base=0x11b;
