@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\CYKOR_LKC_CPPCTF.dir/objects.a
-C:\mingw64\bin\ar.exe qc CMakeFiles\CYKOR_LKC_CPPCTF.dir/objects.a @CMakeFiles\CYKOR_LKC_CPPCTF.dir\objects1.rsp
-C:\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\CYKOR_LKC_CPPCTF.dir/objects.a -Wl,--no-whole-archive -o CYKOR_LKC_CPPCTF.exe -Wl,--out-implib,libCYKOR_LKC_CPPCTF.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\CYKOR_LKC_CPPCTF.dir\linkLibs.rsp
