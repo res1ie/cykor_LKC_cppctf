@@ -19,22 +19,28 @@ public:
 			return o;
 		if(o.is_O)
 			return *this;
+		field m;
 		if(x==o.x){
 			if(y==o.x){
-				//...
+				field x2=x*x;
+				m=(x2+x2+x2+a)/(y+y);
 			}
 			else
 				return EC();
 		}
-		field m = (o.y-y) / (o.x-x);
+		else
+			m = (o.y-y) / (o.x-x);
 		field newx = m*m - x - o.x;
 		field newy = y + (newx-x)*m;
-		return EC(newx,-newy); 
+		return EC(newx,-newy);
 	}
 	EC operator-() const{
 		if(is_O)
 			return EC();
 		return EC(x,-y);
+	}
+	EC operator-(const EC& o) const{
+		return *this+(-o);
 	}
 };
 
@@ -50,4 +56,5 @@ int main(){
 	ec::b=7;
 	ec x,y;
 	x=x+y;
+	x=x-y;
 }
