@@ -42,6 +42,16 @@ public:
 	EC operator-(const EC& o) const{
 		return *this+(-o);
 	}
+	template<typename int_t>
+	EC operator*(int_t oo) const{
+		EC a=*this,b;
+		while(oo){
+			if(oo&1)b=b+a;
+			a=a+a;
+			oo>>=1;
+		}
+		return b;
+	}
 };
 
 template<class field,int code_num>
@@ -57,4 +67,5 @@ int main(){
 	ec x,y;
 	x=x+y;
 	x=x-y;
+	x=y*15;
 }
