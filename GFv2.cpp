@@ -28,6 +28,9 @@ public:
 	MF operator-(const MF o) const{
 		return MF(p+x-o.x);
 	}
+	MF operator-() const{
+		return MF(p-x);
+	}
 	MF operator*(const MF o) const{
 		return MF(x*o.x);
 	}
