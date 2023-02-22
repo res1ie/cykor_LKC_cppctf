@@ -156,7 +156,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=testv2
+CMAKE_PROJECT_NAME:STATIC=environment_test
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=C:/mingw64/bin/ranlib.exe
@@ -246,6 +246,36 @@ CYKOR_LKC_CPPCTF_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 CYKOR_LKC_CPPCTF_SOURCE_DIR:STATIC=C:/Users/user/Documents/github_projects/cppctf/cykor_LKC_cppctf
+
+//Path to a library.
+PYTHON_DEBUG_LIBRARY:FILEPATH=PYTHON_DEBUG_LIBRARY-NOTFOUND
+
+//Path to a library.
+PYTHON_LIBRARY:FILEPATH=PYTHON_LIBRARY-NOTFOUND
+
+//Path to a library.
+PYTHON_LIBRARY_DEBUG:FILEPATH=PYTHON_LIBRARY_DEBUG-NOTFOUND
+
+//Path to a library.
+PYTHON_LIBRARY_RELEASE:FILEPATH=PYTHON_LIBRARY_RELEASE-NOTFOUND
+
+//Value Computed by CMake
+Project_BINARY_DIR:STATIC=C:/Users/user/Documents/github_projects/cppctf/cykor_LKC_cppctf/build
+
+//Value Computed by CMake
+Project_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+Project_SOURCE_DIR:STATIC=C:/Users/user/Documents/github_projects/cppctf/cykor_LKC_cppctf
+
+//Value Computed by CMake
+environment_test_BINARY_DIR:STATIC=C:/Users/user/Documents/github_projects/cppctf/cykor_LKC_cppctf/build
+
+//Value Computed by CMake
+environment_test_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+environment_test_SOURCE_DIR:STATIC=C:/Users/user/Documents/github_projects/cppctf/cykor_LKC_cppctf
 
 //Value Computed by CMake
 testv2_BINARY_DIR:STATIC=C:/Users/user/Documents/github_projects/cppctf/cykor_LKC_cppctf/build
@@ -417,6 +447,14 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 CMAKE_STRIP-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PYTHON_DEBUG_LIBRARY
+PYTHON_DEBUG_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PYTHON_LIBRARY
+PYTHON_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PYTHON_LIBRARY_DEBUG
+PYTHON_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PYTHON_LIBRARY_RELEASE
+PYTHON_LIBRARY_RELEASE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
 

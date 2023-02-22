@@ -128,6 +128,19 @@ testv2/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\testv2.dir\build.make CMakeFiles/testv2.dir/build
 .PHONY : testv2/fast
 
+#=============================================================================
+# Target rules for targets named testpy
+
+# Build rule for target.
+testpy: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 testpy
+.PHONY : testpy
+
+# fast build rule for target.
+testpy/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\testpy.dir\build.make CMakeFiles/testpy.dir/build
+.PHONY : testpy/fast
+
 GFv2.obj: GFv2.cpp.obj
 .PHONY : GFv2.obj
 
@@ -176,6 +189,30 @@ matrix.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\testv2.dir\build.make CMakeFiles/testv2.dir/matrix.cpp.s
 .PHONY : matrix.cpp.s
 
+pymain.obj: pymain.cpp.obj
+.PHONY : pymain.obj
+
+# target to build an object file
+pymain.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\testpy.dir\build.make CMakeFiles/testpy.dir/pymain.cpp.obj
+.PHONY : pymain.cpp.obj
+
+pymain.i: pymain.cpp.i
+.PHONY : pymain.i
+
+# target to preprocess a source file
+pymain.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\testpy.dir\build.make CMakeFiles/testpy.dir/pymain.cpp.i
+.PHONY : pymain.cpp.i
+
+pymain.s: pymain.cpp.s
+.PHONY : pymain.s
+
+# target to generate assembly for a file
+pymain.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\testpy.dir\build.make CMakeFiles/testpy.dir/pymain.cpp.s
+.PHONY : pymain.cpp.s
+
 testGFv2.obj: testGFv2.cpp.obj
 .PHONY : testGFv2.obj
 
@@ -208,6 +245,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... testpy
 	@echo ... testv2
 	@echo ... GFv2.obj
 	@echo ... GFv2.i
@@ -215,6 +253,9 @@ help:
 	@echo ... matrix.obj
 	@echo ... matrix.i
 	@echo ... matrix.s
+	@echo ... pymain.obj
+	@echo ... pymain.i
+	@echo ... pymain.s
 	@echo ... testGFv2.obj
 	@echo ... testGFv2.i
 	@echo ... testGFv2.s

@@ -9,13 +9,14 @@
 					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.0"
+						"string" : "3.26"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -27,10 +28,11 @@
 					[
 						0
 					],
-					"name" : "testv2",
+					"name" : "environment_test",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -38,8 +40,15 @@
 			[
 				{
 					"directoryIndex" : 0,
+					"id" : "testpy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-testpy-Debug-d29d51725e4e7b7817f2.json",
+					"name" : "testpy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "testv2::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-testv2-Debug-feb8170d09f92cb5b6f6.json",
+					"jsonFile" : "target-testv2-Debug-2bc46471ec683d212bec.json",
 					"name" : "testv2",
 					"projectIndex" : 0
 				}
