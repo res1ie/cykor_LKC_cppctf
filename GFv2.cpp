@@ -6,6 +6,8 @@ using std::endl;
 #include <algorithm>
 #include <vector>
 #include <array>
+#include <cmath>
+#include <map>
 using std::array;
 using std::vector;
 using std::bitset;
@@ -61,6 +63,12 @@ public:
 	bool operator==(const MF o) const{
 		return x==o.x;
 	}
+	bool operator!=(const MF o) const{
+		return x!=o.x;
+	}
+	MF operator<(MF o) const{
+		return x<o.x;
+	} 
 };
 /*
 general GF , looking for some good naming 
@@ -126,6 +134,12 @@ public:
 	GGF operator/( GGF o) const{
 		return *this*o.inv();
 	}
+	bool operator<(GGF o) const { // does not means anything, but need it to use std::set<GF>, etc
+		for(int i=n;i>=0;i--)
+			if((*this)[i]!=o[i])
+				return (*this)[i]<o[i];
+		return false;
+	}
 };
 /*
 GF(2^n) 
@@ -178,8 +192,44 @@ public:
 	GF operator/( GF o) const{
 		return *this*o.inv();
 	}
+	bool operator<(GF o) const { // does not means anything, but need it to use std::set<GF>, etc
+		for(int i=n;i>=0;i--)
+			if(this->test(i)!=o.test(i))
+				return o.test(i);
+		return false;
+	}
 };
 template<class int_t,int_t p,int n,int code_num>
 array<MF<int_t,p>,n+1> GGF<int_t,p,n,code_num>::base;
 template<int n,int code_number>
 bitset<n+1> GF<n,code_number>::base;
+
+template<class mg,class int_t=long long> // mg = multiplicative group , long long is about maximum affordable size for this algorithm to be fast enough
+int_t descrete_log(mg a,mg b,int_t phi){ // log_a(b)
+	int_t m=sqrt(phi);
+	int_t n=(phi+m-1)/m;
+	std::map<mg,int_t> mmg;
+	mg aa=a^0;
+	for(int i=0;i<m;i++){
+		mmg[aa]=i;
+		aa=aa*a;
+	}
+	aa=a^0;
+	mg ab=a^m;
+	for(int j=0;j<n;j++){
+		mg bb=b/aa;
+		if(mmg.find(bb)!=mmg.end())
+			return mmg[bb]+j*m;
+		aa=aa*ab;
+	}
+	return -1;
+}
+/*
+//DLP testing
+int main(){
+	typedef GF<8,1> gf;
+	gf::base=0x11b;
+	gf x=2;
+	gf y=x^17;
+	cout<<descrete_log<gf>(x,y,255);
+}*/
