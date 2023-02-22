@@ -1,0 +1,3 @@
+C:/Users/user/Documents/github_projects/cppctf/cykor_LKC_cppctf/build/CMakeFiles/testv2.dir
+C:/Users/user/Documents/github_projects/cppctf/cykor_LKC_cppctf/build/CMakeFiles/edit_cache.dir
+C:/Users/user/Documents/github_projects/cppctf/cykor_LKC_cppctf/build/CMakeFiles/rebuild_cache.dir
