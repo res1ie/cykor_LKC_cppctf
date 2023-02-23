@@ -1,7 +1,9 @@
-from distutils.core import setup, Extension
+from setuptools import setup, Extension
 
-module = Extension('spam', sources = ['spam.cpp'])
+add_module = Extension('add', sources=['addmodule.cpp'], libraries=['gmp'], library_dirs=['C:/msys64/mingw64/lib'])
 
-setup(name='spam',
-        version='1.0',
-        ext_modules=[module])
+setup(
+    name='add',
+    version='1.0',
+    ext_modules=[add_module],
+)
