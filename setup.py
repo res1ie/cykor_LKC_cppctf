@@ -1,9 +1,8 @@
-from setuptools import setup, Extension
+from distutils.core import setup, Extension
 
-add_module = Extension('add', sources=['addmodule.cpp'], libraries=['gmp'], library_dirs=['C:/msys64/mingw64/lib'])
+ext = Extension('elliptic_curve', sources=['python_extension/python_extension.cpp', 'src/elliptic_curve.cpp'])
 
-setup(
-    name='add',
-    version='1.0',
-    ext_modules=[add_module],
-)
+setup(name='elliptic_curve',
+      version='1.0',
+      description='Python package for performing elliptic curve operations',
+      ext_modules=[ext])
